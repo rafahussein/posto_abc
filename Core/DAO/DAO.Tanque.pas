@@ -72,7 +72,7 @@ var
 begin
   try
     DAOConexaoFiredac := TDAOConexaoFiredac.create;
-    SQL := TStringBuilder.Create('SELECT * FROM TB_TANQUES');
+    SQL := TStringBuilder.Create('SELECT * FROM TB_TANQUES ORDER BY ID_TANQUE DESC');
 
     Result := DAOConexaoFiredac.ExecuteComand(SQL.ToString);
   finally
