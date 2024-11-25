@@ -24,6 +24,7 @@ Fortes Report
 Padrão MVC
 Design Patterns -> Abstract Factory
 POO
+Sem vazamento de memória
 
 
 [SOLID]
