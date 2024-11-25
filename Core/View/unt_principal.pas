@@ -579,5 +579,9 @@ begin
   dpd_data_final.Date := Date;
 end;
 
+initialization
+
+ReportMemoryLeaksOnShutdown := True;
+
 
 end.
