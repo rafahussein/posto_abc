@@ -1,0 +1,32 @@
+[Config.ini]
+
+O Arquivo encontra-se neste caminho -> "C:\Fortes\Core\Win32\Debug\Conf.ini".
+Basta informar o caminho completo neste arquivo para o sistema conectar ao banco.
+
+
+[Banco]
+
+Firebird 3.0
+
+
+[Scripts]
+
+Temos dois scripts -> DDL / DML
+Necessário rodar antes de executar o sistema, no mínimo rodar o script para criar os registros
+da tabela de configuração. 
+
+
+[Projeto]
+
+Delphi Community Edition 11
+Firedac
+Fortes Report
+Padrão MVC
+Design Patterns -> Abstract Factory
+POO
+
+
+[SOLID]
+
+Principio da responsabilidade única
+Princípio de Segregação de Interface
