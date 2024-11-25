@@ -361,15 +361,19 @@ var
   Configuracao : TDataSet;
   I: Integer;
 begin
-  Result := TDictionary<String, Currency>.Create(1);
-  Configuracao := TControllerFactory.New.ControllerConfiguracao.getAll;
+  try
+    Result := TDictionary<String, Currency>.Create(1);
+    Configuracao := TControllerFactory.New.ControllerConfiguracao.getAll;
 
-  for I := 0 to Pred(Configuracao.Fields.Count) do
-  begin
-    Result.Add(Configuracao.Fields[I].FieldName, Configuracao.FieldByName(Configuracao.Fields[I].FieldName).AsCurrency);
+    for I := 0 to Pred(Configuracao.Fields.Count) do
+    begin
+      Result.Add(Configuracao.Fields[I].FieldName, Configuracao.FieldByName(Configuracao.Fields[I].FieldName).AsCurrency);
+    end;
+
+    Result := Result;
+  finally
+    FreeAndNil(Configuracao);
   end;
-
-  Result := Result;
 end;
 
 function TfrmPrincipal.get_value_configuracao(aKey : String): Currency;
