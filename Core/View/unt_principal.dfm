@@ -868,8 +868,6 @@
             Align = alClient
             Caption = 'Valor litro do '#243'leo diesel'
             TabOrder = 1
-            ExplicitLeft = -376
-            ExplicitTop = 44
             object LabeledEdit1: TLabeledEdit
               Left = 10
               Top = 51
@@ -2257,6 +2255,7 @@
     object cdsAbastecimentoLitros: TCurrencyField
       DisplayWidth = 18
       FieldName = 'Litros'
+      DisplayFormat = '#,##0.00'
     end
     object cdsAbastecimentoValor: TCurrencyField
       DisplayWidth = 14

@@ -507,7 +507,7 @@ begin
       DataSetTanque                     := TControllerFactory.New.ControllerTanque.getOne(Id_tanque);
       rg_tipo_de_abastecimento.Enabled  := True;
 
-      case 0 of
+      case DataSetTanque.FieldByName('TIPO').AsInteger of
         0: begin
           tipo_combustivel := 'Gasolina';
           preco_litro      := get_value_configuracao('VALOR_LITRO_GASOLINA');
